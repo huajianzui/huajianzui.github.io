@@ -44,3 +44,18 @@ layout: default
     </span>
   {% endif %}
 </div>
+
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+    owner: 'huajianzui',
+    repo: 'https://github.com/huajianzui/huajianzui.github.io',
+    oauth: {
+        client_id: 'a7138871aba1bd6afd8e',
+        client_secret: 'b794028b7a306c7a158628b43eb56574c44be83d',
+    },
+});
+gitment.render('gitmentContainer');
+</script>
