@@ -51,10 +51,10 @@ footer-links:
   tumblr: # https://<username>.tumblr.com
   twitter: # https://www.twitter.com/<your_twitter_username> 
   youtube: # channel/<your_long_string> or user/<user-name>
-  DingTalk: https://h5.dingtalk.com/zproject/profile.html?profile=%40kgDODhPfCQ&cardToken=2d28d9e89f
+  dingdal: https://h5.dingtalk.com/zproject/profile.html?profile=%40kgDODhPfCQ&cardToken=2d28d9e89f
   WeChat: hjyhj12345
 # 站点页脚的文字
-footer-text: 
+footer-text: 迟早不如趁早
 
 # 输入Disqus shortname，即可添加评论区，细节可阅读文档。
 disqus: loffer #shortname
