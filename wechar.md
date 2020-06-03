@@ -3,4 +3,4 @@ layout: page
 title: wechat
 ---
 
-![img](https://huajianzui.github.io/images/wechat.jpg)
+<img src="{{ site.baseurl }}/images/wechat.jpg" alt="My WeChat" style="width: 400px;"/>
