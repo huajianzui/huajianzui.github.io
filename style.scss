@@ -23,6 +23,8 @@ body {
   font-family: $base-font;
   color: $base-color;
   line-height: 1.7em;
+  background: linear-gradient(to rigth top, #63e69e,transparent) no-repeat;
+  background-size: 100% calc(100% - 100vh);
 }
 
 .container {
