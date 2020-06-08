@@ -28,7 +28,7 @@ body {
   justify-content: flex-end;
 }
 
-body::before {
+.indicator {
   content: "";
   background: linear-gradient(to right top, #63e69e 50%, transparent 50%) no-repeat;
   background-size: 100% calc(100% - 100vh);
@@ -37,7 +37,7 @@ body::before {
   mix-blend-mode: darken;
 }
 
-body::after {
+.indicator::after {
   content: "";
   position: fixed;
   top: 3px; bottom: 0; right: 0; left: 0;
