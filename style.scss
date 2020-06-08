@@ -26,12 +26,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  position: relative;
 }
 
 .indicator {
   content: "";
   background: linear-gradient(to right top, #63e69e 50%, transparent 50%) no-repeat;
-  background-size: 100% calc(100% - 100vh);
+  background-size: 100% calc(100% - 100vh + 2px);
   position: absolute;
   top: 0; right: 0; left: 0; bottom: 0;
   mix-blend-mode: darken;
@@ -40,10 +41,8 @@ body {
 .indicator::after {
   content: "";
   position: fixed;
-  top: 3px; bottom: 0; right: 0; left: 0;
+  top: 2px; bottom: 0; right: 0; left: 0;
   background: #fff;
-  background: transparent;
-  display: inline-block;
 }
 
 .container {
