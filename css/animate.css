@@ -1,11 +1,39 @@
-#box {
+.box {
     width: 200px;
     height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    display: inline-block;
     border: 1px solid #000;
-    transition: all 5s ease -2s
+    vertical-align: top;
 }
 
-#box:hover {
+.box:hover {
     background: #f60;
     width: 300px;
+}
+
+#box {
+    transition: all 2s ease 1s
+}
+
+#box1 {
+    transition: all 2s ease -1s
+}
+
+#box3 {
+    transition: all 2s ease -2s
+}
+
+#box4 {
+    transition: all 2s cubic-bezier(2,2,2,2) 
+}
+#box5 {
+    transition: all 2s cubic-bezier(.03,-0.74,.83,.67)
+}
+#box6 {
+    transition: all 2s cubic-bezier(.05,.62,.88,1.52)
+}
+#box7 {
+    transition: all 2s cubic-bezier(.36,-0.79,.59,1.71)
 }
