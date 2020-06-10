@@ -7,12 +7,13 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  {% if page.css %}
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{page.css}} " />
-  {% endif %}
+ 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   <link rel="shortcut icon" href="{{ site.favicon }}">
+  {% if page.css %}
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{page.css}}.css " />
+  {% endif %}
   <script src="https://kit.fontawesome.com/56f7faf3f4.js"></script>
 
 
