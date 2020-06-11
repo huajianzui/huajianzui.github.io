@@ -65,10 +65,10 @@
     color: #ddd;
 }
 
-.animatestart1:hover ~ #animate3 {
+.animatestart1:hover ~ #animate1 {
     animation: step 6s steps(5,start) 
 }
 
-.animatestart1:hover ~ #animate4 {
+.animatestart1:hover ~ #animate2 {
     animation: step 6s steps(5,end)
 }
