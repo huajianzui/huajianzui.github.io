@@ -99,11 +99,11 @@
 }
 
 #animate5 {
-    animation: step1 15s steps(5,start) 
+    animation: step1 15s steps(5,start) infinite
 }
 
 #animate6 {
-    animation: step1 15s steps(5,end) 
+    animation: step1 15s steps(5,end) infinite 
 }
 
 #animatestart3:hover ~ #animate7 {
