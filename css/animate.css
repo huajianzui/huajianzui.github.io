@@ -35,3 +35,25 @@
 #box7 {
     transition: all 2s cubic-bezier(.36,-0.79,.59,1.71)
 }
+
+
+
+.animation1 {
+    width: 80px;
+    height: 80px;
+    background: #980;
+}
+
+.animation2 {
+    width: 80px;
+    height: 80px;
+    background: #0f9;
+}
+
+#animate1 {
+    animation: step 6s steps(5,start)
+}
+
+#animate2 {
+    animation: step 6s steps(5,end)
+}
