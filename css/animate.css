@@ -36,7 +36,11 @@
     transition: all 2s cubic-bezier(.36,-0.79,.59,1.71)
 }
 
-
+@keyframes step {
+    to {
+        transform: translateX(500px);
+    }
+}
 
 .animation1 {
     width: 80px;
@@ -51,9 +55,9 @@
 }
 
 #animate1 {
-    animation: step 6s steps(5,start)
+    animation: step 6s steps(5,start) infinite
 }
 
 #animate2 {
-    animation: step 6s steps(5,end)
+    animation: step 6s steps(5,end) infinite
 }
