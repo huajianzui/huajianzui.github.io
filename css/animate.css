@@ -42,10 +42,22 @@
     }
 }
 
+@keyframes step1 {
+    25%{
+        transform: translateX(500px);
+    }
+    50%{
+        transform: translateX(500px)  rotateZ(180deg);
+    }
+    75% {
+        transform: translateX(500px)  rotateZ(180deg)  scale(1.2);
+    }
+}
+
 .animation1, .animation2 {
     width: 80px;
     height: 80px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .animation1 {			    
@@ -71,4 +83,21 @@
 
 #animatestart1:hover ~ #animate2 {
     animation: step 6s steps(5,end)
+}
+
+
+#animatestart2:hover ~ #animate3 {
+    animation: step 6s steps(5,end) 
+}
+
+#animatestart2:hover ~ #animate4 {
+    animation: step 6s steps(5,end) forwards
+}
+
+#animate5 {
+    animation: step1 15s steps(5,start) 
+}
+
+#animate6 {
+    animation: step1 15s steps(5,end) 
 }
