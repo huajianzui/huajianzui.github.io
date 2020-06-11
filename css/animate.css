@@ -42,22 +42,33 @@
     }
 }
 
-.animation1 {
+.animation1, .animation2 {
     width: 80px;
     height: 80px;
+    margin-top: 10px;
+}
+
+.animation1 {			    
     background: #980;
 }
 
 .animation2 {
-    width: 80px;
-    height: 80px;
     background: #0f9;
 }
 
-#animate1 {
-    animation: step 6s steps(5,start) infinite
+.animatestart {
+    line-height: 45px;
+    background: #888;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    color: #ddd;
 }
 
-#animate2 {
-    animation: step 6s steps(5,end) infinite
+.animatestart1:hover ~ #animate3 {
+    animation: step 6s steps(5,start) 
+}
+
+.animatestart1:hover ~ #animate4 {
+    animation: step 6s steps(5,end)
 }
