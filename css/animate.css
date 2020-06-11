@@ -54,7 +54,7 @@
     }
 }
 
-.animation1, .animation2 {
+.animation1, .animation2,.animation3 {
     width: 80px;
     height: 80px;
     margin-top: 30px;
@@ -66,6 +66,10 @@
 
 .animation2 {
     background: #0f9;
+}
+
+.animation3 {
+    background: #023;
 }
 
 .animatestart {
@@ -100,4 +104,16 @@
 
 #animate6 {
     animation: step1 15s steps(5,end) 
+}
+
+#animatestart3:hover ~ #animate7 {
+    animation: step  5s linear alternate 	
+}
+
+#animatestart3:hover ~ #animate8 {
+    animation: step 5s linear 1.5
+}
+
+#animatestart3:hover ~ #animate9 {
+    animation: step 5s linear 1.5 alternate 
 }
