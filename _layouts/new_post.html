@@ -45,9 +45,11 @@ layout: new_default
   {% endif %}
 </div>
 
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div id="gitalk-container"></div>
+<!-- <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
 <script>
 var gitment = new Gitment({
     owner: 'huajianzui',
@@ -58,4 +60,15 @@ var gitment = new Gitment({
     },
 });
 gitment.render('gitmentContainer');
+var gitalk = new Gitalk(
+  {
+    clientID: `6edcb6d852edf31b2b56`,
+    clientSecret: `4cd53b6c54b574f12eac06c9dd29d717e72db27d`,
+    repo: `huajianzui.github.io`,
+    owner: 'huajianzui',
+    admin: ['huajianzui'],
+    id: 'window.location.pathname', 
+  }
+);
+gitalk.render('gitalk-container');
 </script>
