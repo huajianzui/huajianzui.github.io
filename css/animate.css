@@ -54,7 +54,19 @@
     }
 }
 
-.animation1, .animation2,.animation3 {
+
+@keyframes fill-mode {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+
+
+.animation1, .animation2,.animation3,.animation4  {
     width: 80px;
     height: 80px;
     margin-top: 30px;
@@ -70,6 +82,10 @@
 
 .animation3 {
     background: #023;
+}
+
+.animation4 {
+    background: #f60;
 }
 
 .animatestart {
@@ -116,4 +132,24 @@
 
 #animatestart3:hover ~ #animate9 {
     animation: step 5s linear 1.5 alternate 
+}
+
+#animatestart3:hover ~ #animate10 {
+    animation: step 5s linear 1.5 reverse 
+}
+
+#animatestart4:hover ~ #animate11 {
+    animation: fill-mode  5s backwards 	
+}
+
+#animatestart4:hover ~ #animate12 {
+    animation: fill-mode 5s 1s backwards
+}
+
+#animatestart4:hover ~ #animate13 {
+    animation: fill-mode 5s both
+}
+
+#animatestart4:hover ~ #animate14 {
+    animation: fill-mode 5s 1s reverse backwards 
 }
