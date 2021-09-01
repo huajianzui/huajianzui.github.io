@@ -155,16 +155,24 @@
 }
 
 
-.motion {
+.g-svg {
+    margin-top: 20px; 
+    margin-left: 30px;
+}
+.motion {    
+    position: absolute;
+    top: 20px;
+    left: 30px;
     width: 24px;
     height: 24px;
-    margin-top: 30px;
-    margin-left: 50px;
-    display: inline-block;
     background: #2bc4a2;
     clip-path: polygon(0% 0%,70% 0%,100% 50%,70% 100%,0% 100%,30% 50%);
-    offset: path('M0,0 C 70,70 70,70 140,0 C 210,70 210,70 280,0');
+    offset: path('M 0,35 C 30,0 40,0 70,35 S 110,70 140,35');
     animation: motion-move 8s infinite linear;
+}
+.motion-box {
+    display: inline-block;
+    position: relative;
 }
 
 @keyframes motion-move {
@@ -175,13 +183,18 @@
         offset-distance: 100%;
     }
 }
-.motion:nth-child(2) {
+.motion-box:nth-child(1) .motion{
+    offset-rotate: auto ;      
+}
+.motion:nth-child(2) .motion{
     offset-rotate: 90deg ;      
 }
-.motion:nth-child(3) {
+.motion:nth-child(3) .motion{
     offset-rotate:auto 90deg ;      
 }
-
-.motion:nth-child(4) {
+.motion:nth-child(4) .motion{
+    offset-rotate :reverse  
+}
+.motion:nth-child(5) .motion{
     offset-anchor :top 
 }
