@@ -158,10 +158,12 @@
 #motion {
     width: 24px;
     height: 24px;
-    margin: 30px auto;
+    margin-top: 30px;
+    margin-left: 50px;
+    display: inline-block;
     background: #2bc4a2;
     clip-path: polygon(0% 0%,70% 0%,100% 50%,70% 100%,0% 100%,30% 50%);
-    offset: path('M0,0 C 70,70 70,70 140,0');
+    offset: path('M0,0 C 70,70 70,70 140,0 C 210,70 210,70 280,0');
     animation: motion-move 8s infinite linear;
 }
 
@@ -172,4 +174,14 @@
     100% {
         offset-distance: 100%;
     }
+}
+.motion:nth-child(2) {
+    offset-rotate: 90deg ;      
+}
+.motion:nth-child(3) {
+    offset-rotate:auto 90deg ;      
+}
+
+.motion:nth-child(4) {
+    offset-anchor :top 
 }
