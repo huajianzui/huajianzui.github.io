@@ -186,15 +186,15 @@
 .motion-box:nth-child(1) .motion{
     offset-rotate: auto ;      
 }
-.motion:nth-child(2) .motion{
+.motion-box:nth-child(2) .motion{
     offset-rotate: 90deg ;      
 }
-.motion:nth-child(3) .motion{
+.motion-box:nth-child(3) .motion{
     offset-rotate:auto 90deg ;      
 }
-.motion:nth-child(4) .motion{
+.motion-box:nth-child(4) .motion{
     offset-rotate :reverse  
 }
-.motion:nth-child(5) .motion{
+.motion-box:nth-child(5) .motion{
     offset-anchor :top 
 }
