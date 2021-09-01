@@ -153,3 +153,29 @@
 #animatestart4:hover ~ #animate14 {
     animation: fill-mode 5s 1s reverse backwards 
 }
+
+
+.g-svg {
+    margin-top: 50px;
+    margin-left: calc(50% - 70px);
+    
+}
+#motion {
+    width: 24px;
+    height: 24px;
+    margin-top: -74px;
+    margin-left: calc(50% - 70px);
+    background: #2bc4a2;
+    clip-path: polygon(0% 0%,70% 0%,100% 50%,70% 100%,0% 100%,30% 50%);
+    offset: path('M0,0 C 70,70 70,70 140,0');
+    animation: motion-move 8s infinite linear;
+}
+
+@keyframes motion-move {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
