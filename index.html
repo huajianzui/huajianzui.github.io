@@ -5,9 +5,7 @@ layout: default
 {% if site.posts.size == 0 %}
   <h2>No post found</h2>
 {% endif %}
-<script type="text/javascript">
-  console.log({{paginator}})
-</script>
+
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
@@ -30,7 +28,9 @@ layout: default
           {% endfor %}
         </ul>
       </div>
-
+      <script type="text/javascript">
+        console.log({{post}})
+      </script>
       <div class="entry">
         {{truncate: 200 }}
       </div>

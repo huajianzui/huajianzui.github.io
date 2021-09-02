@@ -11,3 +11,7 @@
     .line-height-box {
         width:  80px;
     }
+    .line-height-box {
+        line-height: 5;
+    }
+
