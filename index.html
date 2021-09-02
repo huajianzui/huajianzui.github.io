@@ -29,10 +29,10 @@ layout: default
         </ul>
       </div>
       <script type="text/javascript">
-        console.log({{post}})
+        {{post.content}}
       </script>
       <div class="entry">
-        {{truncate: 200 }}
+        {{post|truncate: 200 }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
