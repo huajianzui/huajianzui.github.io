@@ -28,11 +28,8 @@ layout: default
           {% endfor %}
         </ul>
       </div>
-      <script type="text/javascript">
-        {{post.content}}
-      </script>
       <div class="entry">
-        {{post|truncate: 200 }}
+        {{post.content|truncate: 200 }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
