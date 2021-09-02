@@ -1,0 +1,13 @@
+    .inline {
+        margin-top: 50px;
+        margin-left: 20px;
+        padding: 20px;
+        width: 100px;
+        height: 100px;
+        background: #ff0;
+        border: 3px solid #ccc;
+    }
+
+    .line-height-box {
+        width:  80px;
+    }
