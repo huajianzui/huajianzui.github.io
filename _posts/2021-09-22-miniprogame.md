@@ -26,6 +26,10 @@ comments: true
 | 安卓             | V8         | chromium定制内核 |
 | 小程序开发者工具 | NWJS       | Chrome Webview   |
 
+需要配置域名,在本地开发时可以在详情本地设置中勾选不校验.
+
+
+
 小程序每个page由四部分组成 与html类似wxml,css类似的wxss,js文件以及配置文件,与网页不同的是标签种类,css选择器,js的一些操作dom的方法. 渲染层与逻辑层互不影响.小程序的逻辑层大量的使用事件+回调函数的方式,包括获取Dom节点.
 
 我的demo项目是一个狗狗展示的具有6,7个页面的小项目,使用的云服务.云服务操作数据库的方式与平常的sql略有不同.每个表格都可以进行权限配置,每个表都有默认的openId字段.通过配置权限给不同的用户展示不同的内容,新版本的小程序要求必须传递openid字段.云服务是以表单位进行连接
@@ -326,3 +330,58 @@ Component({
 
 
 最后说一下真机测试和体验版,必须在开放平台进行配置之后才能进行测试和体验
+
+
+
+
+
+
+
+小程序分为逻辑线程和渲染线程.  通过JSBridge通信 两边都维护了一套vnode
+
++ 逻辑线程 js   小程序逻辑层 加载所有的js
+  + 生命周期 
+  + 事件处理
+  + 装载所有js
+  + Page App 与native通信  与wx交互的基础库
++ 渲染线程  css html   事件监听
+  + 与native通信
+  + 组件相关
+
+wcc   wxml = > js ($gwx)     renderer => render+data => vnode  => dom
+
+wcsc  wxss =>js  处理rpx  根据不同的手机分辨率转换为px 添加到head
+
+
+
++ 渲染线程
+
+  1. 加载基础库 WAWebview
+
+  2. wcc,wcsc 编译 
+
+  3. history.pushState4
+  4. .生成render
+  5. 创建自定义事件,   CustomEvent  渲染器完成 等待数据 
+  6. 基础库中监听了事件 通知逻辑层
+  7. render + 数据 =>vnode
+
++ 逻辑线程
+
+  1. 加载基础库 WAservice
+  2. 引入Page  和 app
+  3. 初始化配置,执行Page app
+
+
+
+相关框架
+
++ 编译时
+  + wepy 类 vue
+  + taro  类 react
++ 运行时
+  + mpvue  uni-app   vue的运行时   小程序运行时   vue代码在小程序中运行 保留运行时  vue template.script,style=>wxml,wxss,js,json 
+  + react
+
+
+
