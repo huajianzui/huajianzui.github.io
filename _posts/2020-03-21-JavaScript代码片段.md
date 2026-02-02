@@ -19,3 +19,12 @@ Number(1234.12234).toLocaleString("zh",{minimumFractionDigits:4,useGrouping:true
 //useGrouping:true  可以不写默认为true
 ```
 
+触发组件重新进行宽高计算对element,vant等监听resize的有效
+
+```js
+  // 等待 DOM 更新完成
+  await nextTick();
+  // 触发窗口 resize 事件，让 van-text-ellipsis 重新计算
+  window.dispatchEvent(new Event("resize"));
+```
+
